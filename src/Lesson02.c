@@ -66,13 +66,14 @@
 #define WIN32_LEAN_AND_MEAN
 #endif
 
-#include <windows.h>		// Header File For Windows
-#include <stdint.h>        // Header file for all usage of derivated integer type
-#if defined(__LCC__)
+#include <windows.h>   /* Bug with LCC64 : two define function 'GetProcessWorkingSetSize' and 'SetProcessWorkingSetSize'in win.h */
+
+#if defined( __LCC__ )
 #ifndef WINGDIAPI
 #   define WINGDIAPI __stdcall
 #endif
 #endif
+
 #include <gl\gl.h>			// Header File For The OpenGL32 Library
 #include <gl\glu.h>			// Header File For The GLu32 Library
 /* #include <gl\glaux.h>		// Header File For The Glaux Library */
