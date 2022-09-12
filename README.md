@@ -64,6 +64,7 @@ Enfin, je vous conseille aussi, si vous n'êtes pas à l'aise avec l'environneme
 En partant de zéro (machine Windows "vierge" sans logiciel), certes, il y a beaucoup d'installations et de configurations, mais, avec un peu de volonté et en suivant les instructions, il est possible d'aboutir à un résultat probant.
 
 Bon courage. Good luck.
+
 Footer
 © 2022 GitHub, Inc.
 Footer navigation
