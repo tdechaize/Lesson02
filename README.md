@@ -63,7 +63,7 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 Enfin, je vous conseille aussi, si vous n'êtes pas à l'aise avec l'environnement de développement CB de bien configurer les compilateurs dans cet outil, avec l'aide du fichier suivant : Code_Blocks_How_config_free_compilers_windows_11.txt.
 
 En partant de zéro (machine Windows "vierge" sans logiciel), certes, il y a beaucoup d'installations et de configurations, mais, avec un peu de volonté et en suivant les instructions, il est possible d'aboutir à un résultat probant.
-Pour vous aider, j'ai aussi créer un "repository" dans GitHub en y mettant mes différents outils générant les environnemnts de répertoires "adéquats" à toutes ces générations.
+Pour vous aider, j'ai aussi créer un "repository" dans GitHub en y mettant mes différents outils générant les environnemnts de répertoires "adéquats" à toutes ces générations : repository "tools_tde".
 
 Bon courage. Good luck.
 
