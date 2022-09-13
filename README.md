@@ -2,6 +2,18 @@
 Lesson02 (OpenGL) from NeHe
 OpenGL Tutorial #2.
 
+Vous trouverez ci-dessous, un sommaire pour aller encore plus loin dans les explications :
+
+## Table of contents
+
+- [Introduction](<Introduction.md>)
+  - [Accueil](<Accueil.md>)
+  - [Quoi de neuf](<Quoideneuf.md>)
+- [Comment démarrer une génération ?](<Commentdemarrerunegeneration.md>)
+  - [Exigences du système](<Exigencesdusysteme.md>)
+  - [Lancement d'une génération CB](<LancementdunegenerationCB.md>)
+
+
 Project Name: Jeff Molofee's OpenGL Tutorial
 
 Project Description: Creating Your First Polygon Tutorial
@@ -47,18 +59,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 
     TDE -> Add resource file end resource header for restitute version + icon OpenGL.ico for fun
 			because versionning is important, same for freeware :-) 
-
-Vous trouverez ci-dessous, un sommaire pour aller encore plus loin dans les explications :
-Table of contents
-
-    Introduction
-        Accueil
-        Quoi de neuf
-    Comment démarrer une génération ?
-        Exigences du système
-        Lancement d'une génération CB
-
-
 
 Enfin, je vous conseille aussi, si vous n'êtes pas à l'aise avec l'environnement de développement CB de bien configurer les compilateurs dans cet outil, avec l'aide du fichier suivant : Code_Blocks_How_config_free_compilers_windows_11.txt.
 
