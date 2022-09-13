@@ -49,6 +49,7 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 			because versionning is important, same for freeware :-) 
 
 Vous trouverez ci-dessous, un sommaire pour aller encore plus loin dans les explications :
+
 Lesson02
 Table of contents
 
