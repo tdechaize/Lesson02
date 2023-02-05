@@ -1,0 +1,236 @@
+\hypertarget{_lesson02_8c}{}\doxysection{C\+:/src/\+Open\+GL/\+Lesson02/\+Lesson02.c File Reference}
+\label{_lesson02_8c}\index{C:/src/OpenGL/Lesson02/Lesson02.c@{C:/src/OpenGL/Lesson02/Lesson02.c}}
+
+
+Ouvre une simple fenêtre Windows et dessine deux formes avec Open\+GL \+: un triangle et un carré.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$gl\textbackslash{}gl.\+h$>$}\newline
+{\ttfamily \#include $<$gl\textbackslash{}glu.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}resource.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+LRESULT CALLBACK \mbox{\hyperlink{_lesson02_8c_a9135ea2a0d6fce68ba3b858226a31a4f}{Wnd\+Proc}} (HWND, UINT, WPARAM, LPARAM)
+\item 
+GLvoid \mbox{\hyperlink{_lesson02_8c_a87bb84d489df61ed7b0c002584fd984f}{Re\+Size\+GLScene}} (GLsizei width, GLsizei height)
+\begin{DoxyCompactList}\small\item\em Fonction Re\+Size\+GLScene \+: redimensionnement de la fenêtre Windows gérant Open\+GL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_lesson02_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}{Init\+GL}} (GLvoid)
+\begin{DoxyCompactList}\small\item\em Fonction Init\+GL \+: Fin de l\textquotesingle{}initialisation de la fenêtre Windows gérant Open\+GL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_lesson02_8c_a52061247bdaeb770e3a1d59eefaad972}{Draw\+GLScene}} (GLvoid)
+\begin{DoxyCompactList}\small\item\em Fonction Draw\+GLScene \+: Dessin sous Open\+GL dans la fenêtre Windows. \end{DoxyCompactList}\item 
+GLvoid \mbox{\hyperlink{_lesson02_8c_af33a2273205c1491be5916d3091658e0}{Kill\+GLWindow}} (GLvoid)
+\begin{DoxyCompactList}\small\item\em Fonction Kill\+GLWindow \+: Destruction de toutes les ressources du programme. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{_lesson02_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}{Create\+GLWindow}} (char $\ast$title, int width, int height, int bits, BOOL fullscreenflag)
+\begin{DoxyCompactList}\small\item\em Fonction Create\+GLWindow \+: création de la fenêtre Windows gérant Open\+GL. \end{DoxyCompactList}\item 
+int WINAPI \mbox{\hyperlink{_lesson02_8c_a661c2abc03926acfaeb93b4ae7db4943}{Win\+Main}} (HINSTANCE \mbox{\hyperlink{_lesson02_8c_a74029128723095e7bf00a71d46af8b24}{h\+Instance}}, HINSTANCE h\+Prev\+Instance, LPSTR lp\+Cmd\+Line, int n\+Cmd\+Show)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+HDC \mbox{\hyperlink{_lesson02_8c_a78f6446a0e13adc7b7b2f239112ac785}{h\+DC}} =NULL
+\item 
+HGLRC \mbox{\hyperlink{_lesson02_8c_a874963259c7cd998acfe6e187fbdb4c1}{h\+RC}} =NULL
+\item 
+HWND \mbox{\hyperlink{_lesson02_8c_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd}} =NULL
+\item 
+HINSTANCE \mbox{\hyperlink{_lesson02_8c_a74029128723095e7bf00a71d46af8b24}{h\+Instance}}
+\item 
+BOOL \mbox{\hyperlink{_lesson02_8c_a55a8351b704275ad12988864918abb2a}{keys}} \mbox{[}256\mbox{]}
+\item 
+BOOL \mbox{\hyperlink{_lesson02_8c_a22389371583c4b8843e06da43399d6d9}{active}} =TRUE
+\item 
+BOOL \mbox{\hyperlink{_lesson02_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}{fullscreen}} =TRUE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ouvre une simple fenêtre Windows et dessine deux formes avec Open\+GL \+: un triangle et un carré. 
+
+Comments manageable by Doxygen
+
+Modified smoothly by Thierry DECHAIZE
+
+Paradigm \+: obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code\+::\+Blocks manager (version 12.\+11), and don\textquotesingle{}t use glaux.\+lib or glaux.\+dll.
+
+a) Mingw 32 and 64 bits \+: downloadable \href{http://sourceforge.net/projects/mingw/}{\texttt{ http\+://sourceforge.\+net/projects/mingw/}} b) Mingw 32 DEV-\/\+CPP \+: included in old Dev-\/\+Cpp \href{http://sourceforge.net/projects/devcpp/}{\texttt{ http\+://sourceforge.\+net/projects/devcpp/}} c) Mingw 32 CB \+: included in package Code\+::\+Blocks (version 12.\+11) \href{http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/}{\texttt{ http\+://sourceforge.\+net/projects/codeblocks/files/\+Binaries/12.\+11/\+Windows/}} d) Borland C \+: downloadable \href{http://edn.embarcadero.com/article/20633}{\texttt{ http\+://edn.\+embarcadero.\+com/article/20633}} e) Digital Mars Compiler C \+: version 8.\+57 downloadable \href{http://www.digitalmars.com}{\texttt{ http\+://www.\+digitalmars.\+com}} f) Open\+Watcom \+: version 1.\+9 downloadable \href{http://openwatcom.mirror.fr/}{\texttt{ http\+://openwatcom.\+mirror.\+fr/}} Version 2.\+0 64bits seems very buggy !!! g) Lcc and Lcc64 \+: downloadable \href{http://www.cs.virginia.edu/~lcc-win32/}{\texttt{ http\+://www.\+cs.\+virginia.\+edu/$\sim$lcc-\/win32/}} h) Cygwin \+: downloadable \href{http://www.cygwin.com/install.html}{\texttt{ http\+://www.\+cygwin.\+com/install.\+html}} (setup.\+exe) i) Visual Studio 2005 + 64bits\+: express edition for free (my version 2005 is full not express) \href{http://www.microsoft.com/france/visual-studio/essayez/express.aspx}{\texttt{ http\+://www.\+microsoft.\+com/france/visual-\/studio/essayez/express.\+aspx}} j) TDM GCC 64 bits \+: downloadable on \href{http://sourceforge.net/projects/TDM-GCC}{\texttt{ http\+://sourceforge.\+net/projects/\+TDM-\/\+GCC}}
+
+Important remark \+: All install in C partition, \char`\"{}no space\char`\"{} and \char`\"{}no special characters\char`\"{} in the name of directories (it\textquotesingle{}s reason to not install in C\+:\textbackslash{}\+Program Files (x86) ... by default proposed on windows 64 bits)
+
+Add resource file end resource header for restitute version + icon Open\+GL.\+ico for fun because versionning is important, same for freeware \+:-\/) !
+
+Date \+: 2013/05/11
+
+\begin{DoxyAuthor}{Author}
+Jeff Molofee ( Ne\+He ) originely, Modified for LCCWin32 compiler by Robert Wishlaw 2002/11/23 
+
+After adapted by Thierry Dechaize to verify paradigm \+: one source for multiple C Compilers 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 May 2013
+\end{DoxyDate}
+Ce programme ne gére que deux événements \+: le clic sur le bouton \char`\"{}\+Fermé\char`\"{} de la fenêtre ou la sortie par la touche ESC. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_lesson02_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}\label{_lesson02_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}} 
+\index{Lesson02.c@{Lesson02.c}!CreateGLWindow@{CreateGLWindow}}
+\index{CreateGLWindow@{CreateGLWindow}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{CreateGLWindow()}{CreateGLWindow()}}
+{\footnotesize\ttfamily BOOL Create\+GLWindow (\begin{DoxyParamCaption}\item[{char $\ast$}]{title,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{bits,  }\item[{BOOL}]{fullscreenflag }\end{DoxyParamCaption})}
+
+
+
+Fonction Create\+GLWindow \+: création de la fenêtre Windows gérant Open\+GL. 
+
+This Code Creates Our Open\+GL Window.
+
+Création de la classe Windows, de la fenêtre principale et des contextes (Device Context et Open\+GL Rendering Context) Parameters Are\+: $\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em title} & Title To Appear At The Top Of The Window $\ast$ \\
+\hline
+{\em width} & Width Of The GL Window Or Fullscreen Mode $\ast$ \\
+\hline
+{\em height} & Height Of The GL Window Or Fullscreen Mode $\ast$ \\
+\hline
+{\em bits} & Number Of Bits To Use For Color (8/16/24/32) $\ast$ \\
+\hline
+{\em fullscreenflag} & Use Fullscreen Mode (TRUE) Or Windowed Mode (FALSE) $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un {\itshape Booleen} restituant le statut de la bonne création de la fenêtre Open\+GL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_lesson02_8c_a52061247bdaeb770e3a1d59eefaad972}\label{_lesson02_8c_a52061247bdaeb770e3a1d59eefaad972}} 
+\index{Lesson02.c@{Lesson02.c}!DrawGLScene@{DrawGLScene}}
+\index{DrawGLScene@{DrawGLScene}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{DrawGLScene()}{DrawGLScene()}}
+{\footnotesize\ttfamily int Draw\+GLScene (\begin{DoxyParamCaption}\item[{GLvoid}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction Draw\+GLScene \+: Dessin sous Open\+GL dans la fenêtre Windows. 
+
+This Code draw the scene Open\+GL in the main window.
+
+Rien 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & un void Open\+GL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_lesson02_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}\label{_lesson02_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}} 
+\index{Lesson02.c@{Lesson02.c}!InitGL@{InitGL}}
+\index{InitGL@{InitGL}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{InitGL()}{InitGL()}}
+{\footnotesize\ttfamily int Init\+GL (\begin{DoxyParamCaption}\item[{GLvoid}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction Init\+GL \+: Fin de l\textquotesingle{}initialisation de la fenêtre Windows gérant Open\+GL. 
+
+This Code finish the initialization Open\+GL of the main window.
+
+Rien 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & un void Open\+GL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_lesson02_8c_af33a2273205c1491be5916d3091658e0}\label{_lesson02_8c_af33a2273205c1491be5916d3091658e0}} 
+\index{Lesson02.c@{Lesson02.c}!KillGLWindow@{KillGLWindow}}
+\index{KillGLWindow@{KillGLWindow}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{KillGLWindow()}{KillGLWindow()}}
+{\footnotesize\ttfamily GLvoid Kill\+GLWindow (\begin{DoxyParamCaption}\item[{GLvoid}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction Kill\+GLWindow \+: Destruction de toutes les ressources du programme. 
+
+This Code destroy all resources of this program.
+
+Rien 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & un void Open\+GL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_lesson02_8c_a87bb84d489df61ed7b0c002584fd984f}\label{_lesson02_8c_a87bb84d489df61ed7b0c002584fd984f}} 
+\index{Lesson02.c@{Lesson02.c}!ReSizeGLScene@{ReSizeGLScene}}
+\index{ReSizeGLScene@{ReSizeGLScene}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{ReSizeGLScene()}{ReSizeGLScene()}}
+{\footnotesize\ttfamily GLvoid Re\+Size\+GLScene (\begin{DoxyParamCaption}\item[{GLsizei}]{width,  }\item[{GLsizei}]{height }\end{DoxyParamCaption})}
+
+
+
+Fonction Re\+Size\+GLScene \+: redimensionnement de la fenêtre Windows gérant Open\+GL. 
+
+This Code Resize the main window.
+
+En entrée les deux nouvelles dimensions de la fenêtre 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the GL Window Or Fullscreen Mode $\ast$ \\
+\hline
+{\em height} & Height of the GL Window Or Fullscreen Mode $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aucun un void Open\+GL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_lesson02_8c_a661c2abc03926acfaeb93b4ae7db4943}\label{_lesson02_8c_a661c2abc03926acfaeb93b4ae7db4943}} 
+\index{Lesson02.c@{Lesson02.c}!WinMain@{WinMain}}
+\index{WinMain@{WinMain}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{WinMain()}{WinMain()}}
+{\footnotesize\ttfamily int WINAPI Win\+Main (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance,  }\item[{HINSTANCE}]{h\+Prev\+Instance,  }\item[{LPSTR}]{lp\+Cmd\+Line,  }\item[{int}]{n\+Cmd\+Show }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_lesson02_8c_a9135ea2a0d6fce68ba3b858226a31a4f}\label{_lesson02_8c_a9135ea2a0d6fce68ba3b858226a31a4f}} 
+\index{Lesson02.c@{Lesson02.c}!WndProc@{WndProc}}
+\index{WndProc@{WndProc}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{WndProc()}{WndProc()}}
+{\footnotesize\ttfamily LRESULT CALLBACK Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd,  }\item[{UINT}]{u\+Msg,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_lesson02_8c_a22389371583c4b8843e06da43399d6d9}\label{_lesson02_8c_a22389371583c4b8843e06da43399d6d9}} 
+\index{Lesson02.c@{Lesson02.c}!active@{active}}
+\index{active@{active}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily BOOL active =TRUE}
+
+\mbox{\Hypertarget{_lesson02_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}\label{_lesson02_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}} 
+\index{Lesson02.c@{Lesson02.c}!fullscreen@{fullscreen}}
+\index{fullscreen@{fullscreen}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{fullscreen}{fullscreen}}
+{\footnotesize\ttfamily BOOL fullscreen =TRUE}
+
+\mbox{\Hypertarget{_lesson02_8c_a78f6446a0e13adc7b7b2f239112ac785}\label{_lesson02_8c_a78f6446a0e13adc7b7b2f239112ac785}} 
+\index{Lesson02.c@{Lesson02.c}!hDC@{hDC}}
+\index{hDC@{hDC}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{hDC}{hDC}}
+{\footnotesize\ttfamily HDC h\+DC =NULL}
+
+\mbox{\Hypertarget{_lesson02_8c_a74029128723095e7bf00a71d46af8b24}\label{_lesson02_8c_a74029128723095e7bf00a71d46af8b24}} 
+\index{Lesson02.c@{Lesson02.c}!hInstance@{hInstance}}
+\index{hInstance@{hInstance}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{hInstance}{hInstance}}
+{\footnotesize\ttfamily HINSTANCE h\+Instance}
+
+\mbox{\Hypertarget{_lesson02_8c_a874963259c7cd998acfe6e187fbdb4c1}\label{_lesson02_8c_a874963259c7cd998acfe6e187fbdb4c1}} 
+\index{Lesson02.c@{Lesson02.c}!hRC@{hRC}}
+\index{hRC@{hRC}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{hRC}{hRC}}
+{\footnotesize\ttfamily HGLRC h\+RC =NULL}
+
+\mbox{\Hypertarget{_lesson02_8c_afec4341c234519e145bac6f0e5edaa51}\label{_lesson02_8c_afec4341c234519e145bac6f0e5edaa51}} 
+\index{Lesson02.c@{Lesson02.c}!hWnd@{hWnd}}
+\index{hWnd@{hWnd}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{hWnd}{hWnd}}
+{\footnotesize\ttfamily HWND h\+Wnd =NULL}
+
+\mbox{\Hypertarget{_lesson02_8c_a55a8351b704275ad12988864918abb2a}\label{_lesson02_8c_a55a8351b704275ad12988864918abb2a}} 
+\index{Lesson02.c@{Lesson02.c}!keys@{keys}}
+\index{keys@{keys}!Lesson02.c@{Lesson02.c}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily BOOL keys\mbox{[}256\mbox{]}}
+

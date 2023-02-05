@@ -1,3 +1,5 @@
+#    Makefile for PellesC compiler
+
 APP      = $(NAME_APPLI)
 EXEFILE  = $(APP).exe
 OBJFILES = $(APP).obj 

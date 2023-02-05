@@ -12,7 +12,7 @@ Ce qui donne le descriptif suivant :
 
 &nbsp;
 
-OpenGL Tutorial #2
+OpenGL Tutorial #3
 
 &nbsp;
 
@@ -20,7 +20,7 @@ Project Name: Jeff Molofee's OpenGL Tutorial
 
 &nbsp;
 
-Project Description: Creating Your First Polygon program with OpenGL..&nbsp;
+Project Description: Creating Your First Polygon program with OpenGL in colors.&nbsp;
 
 &nbsp;
 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/src/OpenGL/NeHe_Lesson02-master/src/Lesson02.rc
+windows.h
+-
+winver.h
+-
+resource.h
+/cygdrive/c/src/OpenGL/NeHe_Lesson02-master/src/resource.h
+
+/cygdrive/c/src/OpenGL/NeHe_Lesson02-master/src/resource.h
+

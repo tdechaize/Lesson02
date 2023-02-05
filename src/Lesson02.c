@@ -27,44 +27,42 @@
 *    and provide for all users an development environment on Windows 11 64 bits
 *    the great Code::Blocks manager (version 20.3), and don't use glaux.lib or glaux.dll.
 *
-*	a) Mingw 32 bits, version officielle gcc 9.2.0 : downloadable on http://sourceforge.net/projects/mingw/ (official)
-*	b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 10.3.0 : donwloadable on http://sourceforge.net/projects/dev-cpp-2020/
-*	c) Mingw 64 bits included in package Code::Blocks (version 20.03), version gcc 8.1.0 : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
+*	a) Mingw 32 bits, version officielle gcc 9.2.0 (very old !) : downloadable on http://sourceforge.net/projects/mingw/ (official)
+*	b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 12.2.0 : donwloadable on https://sourceforge.net/projects/redpanda-cpp/files/
+*	c) Mingw 64 bits included in package Code::Blocks (version 20.03 with mingw), version gcc 11.2.0 : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
 *	d) Mingw 32 and 64 bits packagés, version gcc 11.2.0 : downloadable on  https://winlibs.com/ (and CLANG included in, 32 and 64 bits), two kits :
-*			- winlibs-i686-posix-dwarf-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z (32 bits)
-*			- winlibs-x86_64-posix-seh-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z (64 bits)
-*	e) Cygwin64, 32 et 64 bits, version gcc 11.0.0 : downloadable on http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
+*			- winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (32 bits)
+*			- winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (64 bits)
+*	e) Cygwin64, 32 et 64 bits, version gcc 11.3.0 : downloadable on http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
 *	f) TDM GCC, 32 et 64 bits, version 10.3.0 : downloadable on http://sourceforge.net/projects/TDM-GCC
-*	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20220118.exe), version gcc 11.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
+*	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20230127.exe), version gcc 12.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20230127.exe
 *	h) Visual Studio 2022, 32 et 64 bits, community edition for free : downloadable on https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17
 *	i) Borland C/C++ 32 bits, version 5.5 : downloadable on https://developerinsider.co/download-and-install-borland-c-compiler-on-windows-10/
 *	j) Digital Mars Compiler C 32 bits version 8.57 : downloadable on http://www.digitalmars.com (the more old compiler, the more bugged, dead branch !)
-*	k) OpenWatcom 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/ (only 32 bits version run correctly !)
+*	k) OpenWatcom 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/
 *	l) Lcc and Lcc64, 32 et 64 bits: downloadable http://www.cs.virginia.edu/~lcc-win32/
 *	m) PELLES C, 32 et 64 bits, version 11.0 : downloadable on http://www.smorgasbordet.com/pellesc/
-*	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 13.0.0 (version gcc 12.0.0) : downloadable on https://winlibs.com/
-*	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 13.0.0 : downloadable on https://releases.llvm.org/download.html
-*	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 13.0.0 (version gcc 11.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
-*	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (version gcc 11.0.0) : downloadable http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
+*	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.0.0) : downloadable on https://winlibs.com/
+*	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 15.0.7 : downloadable on https://releases.llvm.org/download.html
+*	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
+*	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (version gcc 11.3.0) : downloadable http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
 *
 *   TDE -> Add resource file and resource header for restitute version + icon OpenGL.ico for fun
 *			because versionning is important, same for freeware :-) !
 *
-*  Date : 2022/02/03
+*  Date : 2023/02/03
 *
 * \file            Lesson02.c
-* \author          Jeff Molofee ( NeHe ) originely, adapted by Thierry Dechaize
+* \author          Jeff Molofee ( NeHe ) originely, HUGE Thanks To Fredric Echols For Cleaning Up, and after adapted smoothly by Thierry Dechaize
 * \version         2.0.1.0
-* \date            3 février 2022
+* \date            3 février 2023
 * \brief           Ouvre une simple fenêtre Windows et dessine deux formes avec OpenGL : un triangle et un carré.
 * \details         Ce programme ne gère que deux événements : le clic sur le bouton "Fermé" de la fenêtre ou la sortie par la touche ESC.
 *
 *
 */
 
-#if defined __CYGWIN__ || defined __LCC__
 #define WIN32_LEAN_AND_MEAN
-#endif
 
 #include <windows.h>   /* Bug with LCC64 : two define function 'GetProcessWorkingSetSize' and 'SetProcessWorkingSetSize'in win.h */
 
@@ -145,8 +143,8 @@ GLvoid ReSizeGLScene(GLsizei width, GLsizei height)		// Resize And Initialize Th
 /**	            This Code finish the initialization OpenGL of the main window.
 *
 * \brief      Fonction InitGL : Fin de l'initialisation de la fenêtre Windows gérant OpenGL
-* \details    Rien
-* \param	  GLvoid			 un void OpenGL.
+* \details    Aucun paramètre : GLvoid.
+* \param 	  GLvoid			 nothing in OpenGL
 * \return     int                un entier booleen (OK ou non).
 *
 */
@@ -165,8 +163,8 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 /**	            This Code draw the scene OpenGL in the main window.
 *
 * \brief      Fonction DrawGLScene : Dessin sous OpenGL dans la fenêtre Windows.
-* \details    Rien
-* \param	  GLvoid			 un void OpenGL.
+* \details    Aucun paramètre : GLvoid.
+* \param 	  GLvoid			 nothing in OpenGL
 * \return     int                un entier booleen (OK ou non).
 *
 */
@@ -194,8 +192,8 @@ int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 /**	            This Code destroy all resources of this program.
 *
 * \brief      Fonction KillGLWindow : Destruction de toutes les ressources du programme.
-* \details    Rien
-* \param	  GLvoid			 un void OpenGL.
+* \details    Aucun paramètre : GLvoid.
+* \param 	  GLvoid			 nothing in OpenGL
 * \return     GLvoid             un void OpenGL.
 *
 */
@@ -244,13 +242,12 @@ GLvoid KillGLWindow(GLvoid)								// Properly Kill The Window
 /**	            This Code Creates Our OpenGL Window.
 *
 * \brief      Fonction CreateGLWindow : création de la fenêtre Windows gérant OpenGL
-* \details    Création de la classe Windows, de la fenêtre principale et des contextes (Device Context et OpenGL Rendering Context)
-* Parameters Are:					                                                *
-* \param 	title			Title To Appear At The Top Of The Window				*
-* \param	width			Width Of The GL Window Or Fullscreen Mode				*
-* \param	height			Height Of The GL Window Or Fullscreen Mode			    *
-* \param	bits			Number Of Bits To Use For Color (8/16/24/32)			*
-* \param	fullscreenflag	Use Fullscreen Mode (TRUE) Or Windowed Mode (FALSE)     *
+* \details    Création de la classe Windows, de la fenêtre principale et des contextes (Device Context et OpenGL Rendering Context)				                                                *
+* \param 	title			Title To Appear At The Top Of The Window
+* \param	width			Width Of The GL Window Or Fullscreen Mode
+* \param	height			Height Of The GL Window Or Fullscreen Mode
+* \param	bits			Number Of Bits To Use For Color (8/16/24/32)
+* \param	fullscreenflag	Use Fullscreen Mode (TRUE) Or Windowed Mode (FALSE)
 * \return   Bool 			Un Booleen restituant le statut de la bonne création de la fenêtre OpenGL.
 *
 */
